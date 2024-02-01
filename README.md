@@ -30,3 +30,7 @@
    
 
 3. 主程序部署主要是依赖files下的脚本，如果需要其他版本的consul请自行修改
+
+4. 进入master的ui界面，查看consul集群是否正常启动
+
+![](E:\Ansible&运维脚本\consul_cluster\images\20240201223904.png)

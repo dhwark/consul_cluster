@@ -1,0 +1,27 @@
+---
+- name: install consul main program
+  script: "consul_cluster.sh"
+
+#  - name: copy master config
+#    file:
+#      src: "files/consul_master/consul_config.json"
+#      dest: "/etc/consul/"
+#    when: inventory_hostname in groups['consul_master']
+
+- name: Copy config files for groups
+  copy:
+    src: 'files/{{ item }}/consul_config.json'
+    dest: '/etc/consul/'
+  with_items:
+    - consul_master
+    - consul_slave1
+    - consul_slave2
+  when: inventory_hostname in groups[item]
+
+- name: start consul service
+  systemd:
+    name: consul
+    state: started
+    enabled: yes
+    daemon_reload: yes
+

@@ -1,0 +1,8 @@
+[consul_master]
+192.168.6.41
+
+[consul_slave1]
+192.168.6.42
+
+[consul_slave2]
+192.168.6.43

@@ -1,0 +1,18 @@
+{
+  "datacenter": "internal",
+  "data_dir": "/usr/local/consul/data",
+  "log_file": "/usr/local/consul/log/consul.log",
+  "log_level": "INFO",
+  "log_rotate_duration": "24h",
+  "node_name": "master",
+  "server": true,
+  "bootstrap_expect": 3,
+  "bind_addr": "0.0.0.0",
+  "client_addr": "0.0.0.0",
+  "advertise_addr": "192.168.6.41",
+  "start_join": ["192.168.6.41"],
+  "ui": true,
+  "telemetry": {
+    "prometheus_retention_time": "60s"
+  }
+}

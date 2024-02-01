@@ -33,4 +33,4 @@
 
 4. 进入master的ui界面，查看consul集群是否正常启动
 
-![](E:\Ansible&运维脚本\consul_cluster\images\20240201223904.png)
+![](images\20240201223904.png)
